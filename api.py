@@ -71,7 +71,7 @@ def predict():
     predicted_price = model.predict(input_data_enc)[0]
     
     # Output the prediction
-    text_output = f"Predicted Car Price: {predicted_price:.2f}"
+    text_output = f"Predicted Car Price (ILS) : {predicted_price:.2f}"
     return render_template('index.html', prediction_text=text_output)
 
 if __name__ == "__main__":
