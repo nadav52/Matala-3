@@ -86,18 +86,11 @@ def prepare_data(raw_df, target='Price'):
     
      # Remove manufactor from model
     df = remove_manufactor_from_model(df)
-
-    #df = create_model_manufactor_feature(df)
     
     # Convert date columns
     date_columns = ['Cre_date', 'Repub_date']
     df = convert_date_columns(df, date_columns)
-
-    # Create season column
-    #df = create_season_column(df, 'Cre_date')
     
-    # Create derived features
-    #df = create_derived_features(df)
 
     # Drop unnecessary columns
     columns_to_drop = ['Cre_date', 'Repub_date', 'Description', 'Supply_score', 'Test']
